@@ -1,0 +1,208 @@
+/* General Container for Placement Materials Page */
+.placement-materials-container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Title Styling */
+.placement-materials-container h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #007bff;
+    padding-bottom: 15px;
+}
+
+/* Grid Layout for Materials */
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Card Styling for Individual Resources */
+.material-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #f1f1f1;
+}
+
+.material-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Material Image Styling */
+.material-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.material-cover:hover {
+    transform: scale(1.05);
+}
+
+/* Material Card Title */
+.material-card h3 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Material Card Description */
+.material-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Download Button Styling */
+.buttons-container .btn-download {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buttons-container .btn-download:hover {
+    background-color: #0056b3;
+}
+
+.buttons-container .btn-download:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design: Tablet and Mobile View */
+@media (max-width: 768px) {
+    .placement-materials-container {
+        padding: 30px;
+    }
+
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-card {
+        padding: 20px;
+    }
+
+    .material-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .material-card p {
+        font-size: 1rem;
+    }
+
+    .btn-download {
+        padding: 10px 20px;
+    }
+}
+
+/* Optional Modal Feature for More Information */
+.material-card .more-info-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.material-card .more-info-btn:hover {
+    background-color: #218838;
+}
+
+.material-card .more-info-btn:active {
+    transform: scale(0.98);
+}
+
+/* Modal Content */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.modal-content .btn-close {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .btn-close:hover {
+    background-color: #c82333;
+}
+
+.modal-content .btn-close:active {
+    transform: scale(0.98);
+}

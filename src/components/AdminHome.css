@@ -1,0 +1,148 @@
+/* Main Container for Admin Home */
+.admin-home {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    /* Push logout button to the bottom */
+}
+
+/* Logo and Sidebar Menu */
+.sidebar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9f1db9;
+    /* Spotify Green */
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    font-size: 1.1rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    color: #8b0aab;
+}
+
+/* Logout Button Styling */
+.logout-button {
+    background-color: #ff4d4d;
+    /* Red color for logout button */
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #d93636;
+    /* Darker red on hover */
+    transform: scale(1.05);
+}
+
+.logout-button .menu-icon {
+    font-size: 1.3rem;
+    margin-right: 8px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Content Heading */
+.main-content h2 {
+    font-size: 2rem;
+    color: #9c1db9;
+    margin-bottom: 1rem;
+}
+
+/* Styling for Active Tab */
+.main-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #9c1db9;
+    text-align: center;
+}
+
+/* Smooth transitions for interactive elements */
+.sidebar ul li {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li:hover {
+    transform: scale(1.05);
+}
+
+.active {
+    color: #9c1db9;
+    font-weight: bold;
+}
+
+/* Company Card Container */
+.company-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual Company Card */
+.company-card {
+    background-color: #ff4d4d;
+    /* Same as logout button color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px;
+}
+
+.company-card:hover {
+    background-color: #d93636;
+    /* Darker shade for hover, same as logout button hover */
+    transform: scale(1.05);
+}
